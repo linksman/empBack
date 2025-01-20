@@ -1,5 +1,5 @@
 
-<h1 align="center">
+<h1>
   <br>
   <img src="https://clarityo-web-app-stg.herokuapp.com/img/clarity_logo.f78faffa.png" alt="Markdownify" width="200" style="background-color:white; padding:10px">
   <br>
@@ -51,7 +51,24 @@ As a restaurant owner, I need to keep a list of my employees so I can integrate 
 - Devops
 - API Versioning
 
-
+ 
+> **What's in?**
+> * MVC structure
+> * routing
+> * API throttling ('express-rate-limit')
+> * logging ('morgan')
+> * tests
+> * create & update data validations ('express-validator')
+> 
+> 
+> **What's out?**
+> * API versioning
+> * custom fields implementation
+> * docker-compose.yaml
+> * persistency
+> * authentication & authorization
+> * caching
+> * API documentation (e.g. swagger)
 
 # Design Assessment    
 
