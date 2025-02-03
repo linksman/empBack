@@ -13,12 +13,14 @@ const handleValidationErrors = (req, res, next) => {
     next();
 };
 
-router.post('/', validateEmployeeCreation, handleValidationErrors, employeeController.createEmployee);
-router.get('/', employeeController.getAllEmployees);
-router.get('/:id', employeeController.getEmployeeById);
-router.put('/:id', validateEmployeeUpdate, handleValidationErrors, employeeController.updateEmployee);
-router.delete('/:id', employeeController.deleteEmployee);
-router.put('/', employeeController.bulkUpdateEmployees);
-router.delete('/', employeeController.bulkDeleteEmployees);
+// Define routes
+router.post("/", employeeController.createEmployee);
+router.get("/", employeeController.getAllEmployees);
+router.get("/:id", employeeController.getEmployeeById);
+router.put("/:id", employeeController.updateEmployee);
+router.delete("/:id", employeeController.deleteEmployee);
+
+module.exports = router;
+
 
 module.exports = router;
