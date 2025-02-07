@@ -12,7 +12,7 @@ RUN npm install --production
 COPY . .
 
 # Expose the port
-EXPOSE 3000
+EXPOSE 5000
 
 # Run the server
 ENTRYPOINT ["node", "app.js"]

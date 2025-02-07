@@ -2,22 +2,22 @@
 const { Sequelize } = require("sequelize");
 require("dotenv").config();
 
-// const sequelize = new Sequelize(process.env.POSTGRES_DB, process.env.POSTGRES_USER, process.env.POSTGRES_PASSWORD, {
-//     host: process.env.POSTGRES_HOST,
-//     dialect: "postgres",
-//     logging: true, // Set to true to see SQL queries in logs
-// });
+const sequelize = new Sequelize(process.env.POSTGRES_DB, process.env.POSTGRES_USER, process.env.POSTGRES_PASSWORD, {
+    host: process.env.POSTGRES_HOST,
+    dialect: "postgres",
+    logging: true, // Set to true to see SQL queries in logs
+});
 
 // Use Railway DATABASE_URL if available
-const sequelize = new Sequelize(process.env.DATABASE_URL, {
-    dialect: "postgres",
-    dialectOptions: {
-        ssl: {
-            require: true,
-            rejectUnauthorized: false, // Important for Railway PostgreSQL
-        },
-    },
-});
+// const sequelize = new Sequelize(process.env.DATABASE_URL, {
+//     dialect: "postgres",
+//     dialectOptions: {
+//         ssl: {
+//             require: true,
+//             rejectUnauthorized: false, // Important for Railway PostgreSQL
+//         },
+//     },
+// });
 
 // module.exports = sequelize;
 
